@@ -1,0 +1,436 @@
+'.source.scss':
+  'var':
+    'prefix': 'var'
+    'body': '$${1}: ${2};'
+    'description': 'Create a scss variable'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss var'
+  'use':
+    'prefix': 'use'
+    'body': '@use: "${1}";'
+    'description': 'Loads mixins, functions, and variables from other Sass stylesheets as modules'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss use'
+  'import':
+    'prefix': 'import'
+    'body': '@import: "${1}";'
+    'description': 'Includes content of another file.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss import'
+  'mixin':
+    'prefix': 'mixin'
+    'body': '@mixin ${1:mixin-name} { ${2} }'
+    'description': 'Defines styles that can be re-used throughout the stylesheet with `@include`.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss mixin'
+  'include':
+    'prefix': 'include'
+    'body': '@include ${1:mixin-name};'
+    'description': 'Includes the styles defined by another mixin into the current rule.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss include'
+  'extend':
+    'prefix': 'extend'
+    'body': '@extend ${1:name};'
+    'description': 'Inherits the styles of another selector.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss extend'
+  'quote':
+    'prefix': 'quote'
+    'body': 'quote(${1:$string})'
+    'description': 'Adds quotes to a string.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss quote'
+  'str-index':
+    'prefix': 'str-index'
+    'body': 'str-index(${1:$string}, ${2:$substring})'
+    'description': 'Returns the index of the first occurance of $substring in $string.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss str-index'
+  'str-insert':
+    'prefix': 'str-insert'
+    'body': 'str-insert(${1:$string}, ${2:$insert}, ${3:$index})'
+    'description': 'Inserts $insert into $string at $index.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss str-insert'
+  'str-length':
+    'prefix': 'str-length'
+    'body': 'str-length(${1:$string})'
+    'description': 'Returns the number of characters in a string.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss str-length'
+  'str-slice':
+    'prefix': 'str-slice'
+    'body': 'str-slice(${1:$string}, ${2:$start}, ${3:$end})'
+    'description': 'Extracts a substring from $string.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss str-slice'
+  'to-lower-case':
+    'prefix': 'to-lower-case'
+    'body': 'to-lower-case(${1:$string})'
+    'description': 'Converts a string to lower case.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss to-lower-case'
+  'to-upper-case':
+    'prefix': 'to-upper-case'
+    'body': 'to-upper-case(${1:$string})'
+    'description': 'Converts a string to upper case.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss to-upper-case'
+  'unique-id':
+    'prefix': 'unique-id'
+    'body': 'unique-id()'
+    'description': 'Returns a unique randomly generated unquoted string'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss unique-id'
+  'unquote':
+    'prefix': 'unquote'
+    'body': 'unquote(${1:$string})'
+    'description': 'Removes quotes from a string.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss unquote'
+  'abs':
+    'prefix': 'abs'
+    'body': 'abs(${1:$number})'
+    'description': 'Returns the absolute value of number.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss abs'
+  'ceil':
+    'prefix': 'ceil'
+    'body': 'ceil(${1:$number})'
+    'description': 'Rounds number up to the nearest integer.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss ceil'
+  'comparable':
+    'prefix': 'comparable'
+    'body': 'comparable(${1:$num1}, ${2:$num2})'
+    'description': 'Returns whether num1 and num2 are comparable.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss comparable'
+  'floor':
+    'prefix': 'floor'
+    'body': 'floor(${1:$number})'
+    'description': 'Rounds number down to the nearest integer.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss floor'
+  'max':
+    'prefix': 'max'
+    'body': 'max(${1:$number})'
+    'description': 'Returns the highest value of several numbers.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss max'
+  'min':
+    'prefix': 'min'
+    'body': 'min(${1:$number})'
+    'description': 'Returns the lowest value of several numbers.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss min'
+  'percentage':
+    'prefix': 'percentage'
+    'body': 'percentage(${1:number})'
+    'description': 'Converts number to a percentage (multiplies the number with 100).'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss percentage'
+  'random':
+    'prefix': 'random'
+    'body': 'random()'
+    'description': 'Returns a random number between 0 and 1.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss random'
+  'round':
+    'prefix': 'round'
+    'body': 'round(${1:$number})'
+    'description': 'Rounds number to the nearest integer.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss round'
+  'append':
+    'prefix': 'append'
+    'body': 'append(${1:$list}, ${2:$value}, ${3:$separator})'
+    'description': 'Appends a single value onto the end of a list.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss append'
+  'index':
+    'prefix': 'index'
+    'body': 'index(${1:$list}, ${2:$value})'
+    'description': 'Returns the position of a value within a list.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss index'
+  'is-bracketed':
+    'prefix': 'is-bracketed'
+    'body': 'is-bracketed(${1:$list})'
+    'description': 'Checks whether the list has square brackets.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss is-bracketed'
+  'join':
+    'prefix': 'join'
+    'body': 'join(${1:$list1}, ${2:$list2}, ${3:$separator}, ${4:$bracketed})'
+    'description': 'Appends list2 to the end of list1.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss join'
+  'length':
+    'prefix': 'length'
+    'body': 'length(${1:$list})'
+    'description': 'Returns the length of the list.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss length'
+  'list-separator':
+    'prefix': 'list-separator'
+    'body': 'list-separator(${1:$list})'
+    'description': 'Returns the list separator used, as a string. Can be either space or comma.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss list-separator'
+  'nth':
+    'prefix': 'nth'
+    'body': 'nth(${1:$list}, ${2:$n})'
+    'description': 'Returns the nth element in the list.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss nth'
+  'zip':
+    'prefix': 'zip'
+    'body': 'zip(${1:$list})'
+    'description': 'Combines lists into a single multidimensional list.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss zip'
+  'set-nth':
+    'prefix': 'set-nth'
+    'body': 'set-nth(${1:$list}, ${2:$n}, ${3:$value})'
+    'description': 'Sets the nth list element to the value specified.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss set-nth'
+  'map-get':
+    'prefix': 'map-get'
+    'body': 'map-get(${1:$map}, ${2:$key})'
+    'description': 'Returns the value for the specified key in the map.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss map-get'
+  'map-has-key':
+    'prefix': 'map-has-key'
+    'body': 'map-has-key(${1:$map}, ${2:$key})'
+    'description': 'Checks whether map has the specified key. Returns true or false.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss map-has-key'
+  'map-keys':
+    'prefix': 'map-keys'
+    'body': 'map-keys(${1:$map})'
+    'description': 'Returns a list of all keys in map.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss map-keys'
+  'map-merge':
+    'prefix': 'map-merge'
+    'body': 'map-merge(${1:$map1}, ${2:$map2})'
+    'description': 'Appends map2 to the end of map1.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss map-merge'
+  'map-remove':
+    'prefix': 'map-remove'
+    'body': 'map-remove(${1:$map}, ${2:$keys})'
+    'description': 'Removes the specified keys from map.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss map-remove'
+  'map-values':
+    'prefix': 'map-values'
+    'body': 'map-values(${1:$map})'
+    'description': 'Returns a list of all values in map.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss map-values'
+  'is-superselector':
+    'prefix': 'is-superselector'
+    'body': 'is-superselector(${1:$super}, ${2:sub})'
+    'description': 'Checks whether the super selector matches all the elements that sub matches.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss is-superselector'
+  'selector-append':
+    'prefix': 'selector-append'
+    'body': 'selector-append(${1:$selectors})'
+    'description': 'Appends the second (and third/fourth etc.) selector to the first selector.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss selector-append'
+  'selector-extend':
+    'prefix': 'selector-extend'
+    'body': 'selector-extend(${1:selector}, ${2:extendee}, ${3:extender})'
+    'description': 'Extends $extendee with $extender within $selector.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss selector-extend'
+  'selector-nest':
+    'prefix': 'selector-nest'
+    'body': 'selector-nest(${1:$selectors})'
+    'description': 'Nests selector beneath one another like they would be nested in the stylesheet.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss selector-nest'
+  'selector-parse':
+    'prefix': 'selector-parse'
+    'body': 'selector-parse(${1:$selectors})'
+    'description': 'Parses a selector into the format returned by &.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss selector-parse'
+  'selector-replace':
+    'prefix': 'selector-replace'
+    'body': 'selector-replace(${1:$selector}, ${2:$original}, ${3:$replacement})'
+    'description': 'Replaces $original with $replacement within $selector.F'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss selector-replace'
+  'selector-unify':
+    'prefix': 'selector-unify'
+    'body': 'selector-unify(${1:Selector1}, ${2:$selector2})'
+    'description': 'Unifies two selectors to produce a selector that matches elements matched by both.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss selector-unify'
+  'simple-selectors':
+    'prefix': 'simple-selectors'
+    'body': 'simple-selectors(${1:$selectors})'
+    'description': 'Returns a list of the individual selectors in selectors.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss simple-selectors'
+  'call':
+    'prefix': 'call'
+    'body': 'call(${1:$function}, ${2:$arguments})'
+    'description': 'Calls a function with arguments, and returns the result.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss call'
+  'content-exists':
+    'prefix': 'content-exists'
+    'body': 'content-exists()'
+    'description': 'Checks whether the current mixin was passed a @content block.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss content-exists'
+  'feature-exists':
+    'prefix': 'feature-exists'
+    'body': 'feature-exists(${1:$feature})'
+    'description': 'Checks whether feature is supported by the current Sass implementation.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss feature-exists'
+  'function-exists':
+    'prefix': 'function-exists'
+    'body': 'function-exists(${1:$function-name})'
+    'description': 'Checks whether the specified function exists.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss function-exists'
+  'get-function':
+    'prefix': 'get-function'
+    'body': 'get-function(${1:$function-name}, ${2:css: false})'
+    'description': 'Returns the specified function. If css is true, it returns a plain CSS function instead.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss get-function'
+  'global-variable-exists':
+    'prefix': 'global-variable-exists'
+    'body': 'global-variable-exists(${1:$var-name})'
+    'description': 'Checks whether the specified global variable exists.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss global-variable-exists'
+  'inspect':
+    'prefix': 'inspect'
+    'body': 'inspect(${1:$value})'
+    'description': 'Returns a string representation of value.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss inspect'
+  'mixin-exists':
+    'prefix': 'mixin-exists'
+    'body': 'mixin-exists(${1:$mixin-name})'
+    'description': 'Checks whether the specified mixin exists.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss mixin-exists'
+  'type-of':
+    'prefix': 'type-of'
+    'body': 'type-of(${1:$value})'
+    'description': 'Returns the type of value.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss type-of'
+  'unit':
+    'prefix': 'unit'
+    'body': 'unit(${1:$number})'
+    'description': 'Returns the unit associated with a number.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss unit'
+  'unitless':
+    'prefix': 'unitless'
+    'body': 'unitless(${1:$number})'
+    'description': 'Checks whether the specified number has a unit associated with it.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss unitless'
+  'variable-exists':
+    'prefix': 'variable-exists'
+    'body': 'variable-exists(${1:$var-name})'
+    'description': 'Checks whether the specified variable exists in the current scope.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss variable-exists'
+  'rbg':
+    'prefix': 'rbg'
+    'body': 'rgb(${1:$red}, ${2:$green}, ${3:$blue})'
+    'description': 'Sets a color using the Red-Green-Blue (RGB) model.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss rbg'
+  'hsl':
+    'prefix': 'hsl'
+    'body': 'hsl(${1:$hue}, ${2:$saturation}, ${3:$lightness})'
+    'description': 'Creates a Color from hue, saturation, and lightness values.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss hsl'
+  'hsla':
+    'prefix': 'hsla'
+    'body': 'hsla(${1:$hue}, ${2:$saturation}, ${3:$lightness}, ${4:$alpha})'
+    'description': 'Sets a color using the Hue-Saturation-Lightness-Alpha (HSLA) model.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss hsla'
+  'grayscale':
+    'prefix': 'grayscale'
+    'body': 'grayscale(${1:$color})'
+    'description': 'Sets a gray color with the same lightness as color.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss grayscale'
+  'complement':
+    'prefix': 'complement'
+    'body': 'complement(${1:$color})'
+    'description': 'Sets a color that is the complementary color of color.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss complement'
+  'invert':
+    'prefix': 'invert'
+    'body': 'invert(${1:$color}, ${2:$weight})'
+    'description': 'Sets a color that is the inverse or negative color of color.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss invert'
+  'red':
+    'prefix': 'red'
+    'body': 'red(${1:$color})'
+    'description': 'Returns the red value of color as a number between 0 and 255.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss red'
+  'green':
+    'prefix': 'green'
+    'body': 'green(${1:$green})'
+    'description': 'Returns the green value of color as a number between 0 and 255.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss green'
+  'blue':
+    'prefix': 'blue'
+    'body': 'blue(${1:$blue})'
+    'description': 'Returns the blue value of color as a number between 0 and 255.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss blue'
+  'hue':
+    'prefix': 'hue'
+    'body': 'hue(${1:color})'
+    'description': 'Returns the hue of color as a number between 0deg and 360deg.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss hue'
+  'saturation':
+    'prefix': 'saturation'
+    'body': 'saturation(${1:$color})'
+    'description': 'Returns the HSL saturation of color as a number between 0% and 100%.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss saturation'
+  'lightness':
+    'prefix': 'lightness'
+    'body': 'lightness(${1:$color})'
+    'description': 'Returns the HSL lightness of color as a number between 0% and 100%.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss lightness'
+  'alpha':
+    'prefix': 'alpha'
+    'body': 'alpha(${1:$color})'
+    'description': 'Returns the alpha channel of color as a number between 0 and 1.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss alpha'
+  'opacity':
+    'prefix': 'opacity'
+    'body': 'opacity(${1:$color})'
+    'description': 'Returns the alpha channel of color as a number between 0 and 1.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss opacity'
+  'mix':
+    'prefix': 'mix'
+    'body': 'mix(${1:$color1}, ${2:$color2}, ${3:$weight})'
+    'description': 'Creates a color that is a mix of color1 and color2.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss mix'
+  'adjust-hue':
+    'prefix': 'adjust-hue'
+    'body': 'adjust-hue(${1:$color}, ${2:$degrees})'
+    'description': 'Adjusts the colors hue with a degree from -360deg to 360deg.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss adjust-hue'
+  'adjust-color':
+    'prefix': 'adjust-color'
+    'body': 'adjust-color(${1:$color}, ${2:$red}, ${3:$green}, ${4:$blue}, ${5:hue}, ${6:$saturation}, ${7:$lightness}, ${8:$alpha})'
+    'description': 'Adjusts one or more parameters by the specified amount.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss adjust-color'
+  'change-color':
+    'prefix': 'change-color'
+    'body': 'change-color(${1:$color}, ${2:$red}, ${3:$green}, ${4:$blue}, ${5:$hue}, ${5:$saturation}, ${6:$lightness}, ${7:$alpha})'
+    'description': 'Sets one or more parameters of a color to new values.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss change-color'
+  'scale-color':
+    'prefix': 'scale-color'
+    'body': 'scale-color(${1:$color}, ${2:$red}, ${3:$green}, ${4:$blue}, ${5:$saturation}, ${6:$lightness}, ${7:$alpha})'
+    'description': 'Scales one or more parameters of color.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss scale-color'
+  'rgba':
+    'prefix': 'rgba'
+    'body': 'rgba(${1:$color}, ${2:$alpha})'
+    'description': 'Creates a new color of color with the given alpha channel.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss rgba'
+  'lighten':
+    'prefix': 'lighten'
+    'body': 'lighten(${1:$color}, ${2:$amount})'
+    'description': 'Creates a lighter color of color with an amount between 0% and 100%.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss lighten'
+  'darken':
+    'prefix': 'darken'
+    'body': 'darken(${1:$color}, ${2:$amount})'
+    'description': 'Creates a darker color of color with an amount between 0% and 100%.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss darken'
+  'saturate':
+    'prefix': 'saturate'
+    'body': 'saturate(${1:$color}, ${2:$amount})'
+    'description': 'Creates a more saturated color of color with an amount between 0% and 100%.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss saturate'
+  'desaturate':
+    'prefix': 'desaturate'
+    'body': 'desaturate(${1:$color}, ${2:$amount})'
+    'description': 'Creates a less saturated color of color with an amount between 0% and 100%.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss desaturate'
+  'opacify':
+    'prefix': 'opacify'
+    'body': 'opacify(${1:$color}, ${2:$amount})'
+    'description': 'Creates a more opaque color of color with an amount between 0 and 1.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss opacify'
+  'fade-in':
+    'prefix': 'fade-in'
+    'body': 'fade-in(${1:$color}, ${2:$amount})'
+    'description': 'Creates a more opaque color of color with an amount between 0 and 1.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss fade-in'
+  'transparentize':
+    'prefix': 'transparentize'
+    'body': 'transparentize(${1:$color}, ${2:$amount})'
+    'description': 'Creates a more transparent color of color with an amount between 0 and 1.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss transparentize'
+  'fade-out':
+    'prefix': 'fade-out'
+    'body': 'fade-out(${1:$color}, ${2:$amount})'
+    'description': 'Creates a more transparent color of color with an amount between 0 and 1.'
+    'descriptionMoreURL': 'https://developer.mozilla.org/en-US/search?q=scss fade-out'
